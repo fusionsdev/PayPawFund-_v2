@@ -2,39 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── FusionOps Live-Preview Variables ─────────────────────────────────────── */
+/* ─── Warm Veterinary Trust — Forest Green + Warm Ivory ───────────────────── */
 :root {
-  --color-primary: #0D7377;
-  --color-accent: #14BDBE;
-}
+  /* Forest Green — calm authority, primary CTAs */
+  --primary: 145 45% 22%;
 
-/* ─── Palette 4: Ocean Teal + Soft Lavender ───────────────────────────────── */
-:root {
-  /* Ocean Teal — calm authority, premium healthcare */
-  --primary: 182 78% 26%;
+  /* Sage — gentle accessory accent (ratings, subtle highlights) */
+  --secondary: 130 16% 63%;
 
-  /* Soft Lavender — gentle, approachable complement */
-  --secondary: 252 62% 83%;
+  /* Brighter Forest — active/hover states */
+  --accent: 145 40% 30%;
 
-  /* Electric Aqua — active states, CTAs, gradients */
-  --accent: 181 80% 41%;
+  /* Warm Ivory background — calm, institutional */
+  --background: 40 60% 96%;
 
-  /* Ghost White background — open, airy */
-  --background: 228 30% 98%;
-
-  /* Deep Teal Night — high-contrast readable text */
-  --foreground: 186 54% 11%;
+  /* Deep Ink — high-contrast readable text */
+  --foreground: 143 24% 13%;
 
   /* Pure White surface */
   --surface: 0 0% 100%;
 
-  /* Slate Blue — secondary text, labels */
-  --muted: 196 15% 46%;
+  /* Soft Ink — secondary text, labels */
+  --muted: 137 9% 38%;
 
-  /* Pale Aqua — dividers, input outlines */
-  --border: 185 32% 87%;
+  /* Warm Line — dividers, input outlines */
+  --border: 41 30% 84%;
 
-  --radius: 0.875rem;
+  --radius: 0.75rem;
 }
 
 /* ─── Base Reset ───────────────────────────────────────────────────────────── */
@@ -82,19 +76,17 @@
   }
 
   .amount-btn:hover {
-    background: hsl(var(--accent) / 0.08);
-    border-color: hsl(var(--accent) / 0.60);
+    background: hsl(var(--primary) / 0.06);
+    border-color: hsl(var(--primary) / 0.55);
     color: hsl(var(--foreground));
-    transform: translateY(-2px);
-    transition: transform 0.15s ease;
   }
 
   .amount-btn--active {
-    background: hsl(var(--accent) / 0.15);
-    border-color: hsl(var(--foreground));
-    color: hsl(var(--primary));
+    background: hsl(var(--primary));
+    border-color: hsl(var(--primary));
+    color: hsl(0 0% 100%);
     font-weight: 700;
-    box-shadow: 0 0 0 3px hsl(var(--accent) / 0.20);
+    box-shadow: 0 1px 2px hsl(var(--foreground) / 0.14);
   }
 
   .amount-btn--active:hover {
@@ -135,26 +127,20 @@
     flex-shrink: 0;
   }
 
-  /* Glass card — neo-brutalist sharp aesthetic */
+  /* Calm bordered card */
   .glass-card {
-    background: hsl(0 0% 100%);
-    border: 3px solid hsl(var(--foreground));
+    background: hsl(var(--surface));
+    border: 1px solid hsl(var(--border));
     border-radius: var(--radius);
-    box-shadow: 8px 8px 0 0 hsl(var(--foreground));
+    box-shadow: none;
   }
 
-  @media (min-width: 768px) {
-    .glass-card {
-      background: hsl(0 0% 100%);
-    }
-  }
-
-  /* Elevated card with bold border */
+  /* Elevated card — same calm border, soft shadow */
   .premium-card {
-    background: hsl(0 0% 100%);
-    border: 3px solid hsl(var(--foreground));
+    background: hsl(var(--surface));
+    border: 1px solid hsl(var(--border));
     border-radius: var(--radius);
-    box-shadow: 10px 10px 0 0 hsl(var(--secondary) / 0.35);
+    box-shadow: 0 8px 24px -12px hsl(var(--foreground) / 0.18);
   }
 
   /* Stat chip */
@@ -169,15 +155,15 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0.875rem 2rem;
-    background: linear-gradient(135deg, hsl(182 78% 30%), hsl(182 78% 20%));
+    background: hsl(var(--primary));
     color: hsl(0 0% 100%);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: 0.9375rem;
     border-radius: var(--radius);
     letter-spacing: 0.01em;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 20px hsl(182 78% 26% / 0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 2px 8px hsl(var(--foreground) / 0.16);
     white-space: nowrap;
     cursor: pointer;
     text-decoration: none;
@@ -186,13 +172,13 @@
 
   .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 8px 28px hsl(182 78% 26% / 0.45), inset 0 1px 0 rgba(255,255,255,0.3);
-    background: linear-gradient(135deg, hsl(182 78% 34%), hsl(182 78% 24%));
+    box-shadow: 0 4px 14px hsl(var(--foreground) / 0.22);
+    background: hsl(var(--accent));
   }
 
   .btn-primary:active {
     transform: translateY(0);
-    box-shadow: 0 4px 20px hsl(182 78% 26% / 0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+    box-shadow: 0 2px 8px hsl(var(--foreground) / 0.16);
   }
 
   /* Ghost button */
@@ -224,20 +210,21 @@
     @apply text-3xl md:text-4xl font-display font-bold text-foreground leading-tight mb-4;
   }
 
-  /* Section label — neo-brutalist badge */
+  /* Section label — soft eyebrow pill */
   .section-label {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: 0.6875rem;
-    font-weight: 800;
-    letter-spacing: 0.15em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: hsl(0 0% 100%);
-    background: hsl(var(--foreground));
-    border: 3px solid hsl(var(--foreground));
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius);
+    color: hsl(var(--primary));
+    background: hsl(var(--primary) / 0.1);
+    border: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
     margin-bottom: 1.25rem;
-    box-shadow: 4px 4px 0 0 hsl(var(--accent));
+    box-shadow: none;
   }
 
   /* Gold text */
@@ -288,9 +275,9 @@
     box-shadow: 0 0 0 5px hsl(var(--primary) / 0.25), 0 2px 8px rgba(0,0,0,0.25);
   }
 
-  /* Gradient text — ocean teal to electric aqua */
+  /* Gradient text — forest green */
   .gradient-text {
-    background: linear-gradient(135deg, hsl(181 80% 41%), hsl(182 78% 26%), hsl(181 80% 55%));
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -300,14 +287,6 @@
   .mono-num {
     font-family: ui-monospace, monospace;
     font-feature-settings: 'tnum';
-  }
-
-  /* Subtle grid bg pattern */
-  .grid-bg {
-    background-image:
-      linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
-    background-size: 40px 40px;
   }
 
   /* Glow ring */
@@ -462,10 +441,10 @@
   background: hsl(0 0% 100% / 0.97);
 }
 
-/* ─── Logo / brand gradient — electric aqua ──────────────────────────────── */
+/* ─── Logo / brand mark ─────────────────────────────────────────────────── */
 .brand-icon-bg {
-  background: hsl(var(--accent));
-  border: 2px solid hsl(var(--foreground));
+  background: hsl(var(--primary));
+  border: none;
 }
 
 /* ─── Disclosure border ────────────────────────────────────────────────────── */
@@ -475,17 +454,9 @@
 
 /* ─── Hero component classes ───────────────────────────────────────────────── */
 .hero-nav {
-  background: hsl(0 0% 100%);
+  background: hsl(var(--surface));
   box-shadow: none;
-  border-bottom: 3px solid hsl(var(--foreground));
-}
-
-.hero-blob-blue {
-  background: radial-gradient(circle, hsl(var(--accent) / 0.12), transparent 70%);
-}
-
-.hero-blob-rose {
-  background: radial-gradient(circle, hsl(var(--secondary) / 0.15), transparent 70%);
+  border-bottom: 1px solid hsl(var(--border));
 }
 
 .hero-progress-bar {
@@ -493,11 +464,11 @@
 }
 
 .hero-stat-chip {
-  background: hsl(185 32% 94%);
+  background: hsl(var(--border) / 0.35);
 }
 
 .hero-stats-bar {
-  background: hsl(185 30% 97% / 0.96);
+  background: hsl(var(--background) / 0.96);
 }
 
 .hero-rate-badge {

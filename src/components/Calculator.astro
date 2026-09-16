@@ -60,7 +60,7 @@ const applyUrl = '/?requested_amount=1500';
           <div class="flex justify-between items-end mb-4">
             <label for="apr-slider" class="text-foreground/70 text-xs font-semibold uppercase tracking-widest">Estimated APR</label>
             <span id="apr-display" class="font-display font-bold text-2xl mono-num"
-              style="color: hsl(182 78% 26%);">{aprMin}%</span>
+              style="color: hsl(var(--primary));">{aprMin}%</span>
           </div>
           <input id="apr-slider" type="range"
             min={aprMin} max={aprMax} step="0.25" value={aprMin}
@@ -80,19 +80,19 @@ const applyUrl = '/?requested_amount=1500';
       <div class="flex flex-col gap-4">
 
         <!-- Big monthly payment -->
-        <div class="premium-card p-8 text-center reveal" style="border-top-color: hsl(181 80% 41% / 0.4);">
+        <div class="premium-card p-8 text-center reveal" style="border-top-color: hsl(var(--primary) / 0.4);">
           <p class="text-foreground/70 text-xs font-semibold uppercase tracking-widest mb-3">Your Monthly Payment</p>
           <div id="monthly-payment" class="font-display font-bold text-5xl text-foreground mono-num mb-2">$294</div>
-          <div class="h-px mx-auto w-16 mb-3" style="background: linear-gradient(90deg, transparent, hsl(181 80% 41% / 0.5), transparent);"></div>
+          <div class="h-px mx-auto w-16 mb-3" style="background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.5), transparent);"></div>
           <p class="text-foreground/55 text-xs">Fixed rate—never changes</p>
         </div>
 
         <!-- Breakdown -->
         <div class="grid grid-cols-3 gap-3">
           {[
-            { id: 'total-interest', label: 'Interest', color: 'hsl(252 62% 65%)' },
+            { id: 'total-interest', label: 'Interest', color: 'hsl(var(--secondary))' },
             { id: 'total-paid',     label: 'Total Cost', color: 'hsl(var(--foreground))' },
-            { id: 'term-months',    label: 'Term', color: 'hsl(182 78% 26%)' },
+            { id: 'term-months',    label: 'Term', color: 'hsl(var(--primary))' },
           ].map(({ id, label, color }) => (
             <div class="glass-card p-4 text-center">
               <div id={id} class="font-display font-bold text-lg mono-num" style={`color: ${color};`}>—</div>
@@ -106,16 +106,16 @@ const applyUrl = '/?requested_amount=1500';
           <p class="text-foreground/70 text-xs font-semibold uppercase tracking-widest mb-3">Principal vs Interest</p>
           <div class="h-2 rounded-full overflow-hidden flex" id="amort-bar">
             <div id="amort-principal" class="h-full"
-              style="background: linear-gradient(90deg, hsl(181 80% 55%), hsl(181 80% 41%)); width: 95%; transition: width 0.15s ease;"></div>
+              style="background: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary))); width: 95%; transition: width 0.15s ease;"></div>
             <div id="amort-interest" class="h-full"
-              style="background: hsl(252 62% 70% / 0.55); width: 5%; transition: width 0.15s ease;"></div>
+              style="background: hsl(var(--secondary) / 0.55); width: 5%; transition: width 0.15s ease;"></div>
           </div>
           <div class="flex gap-4 mt-3">
             <div class="flex items-center gap-1.5 text-xs text-foreground/70">
-              <span class="w-2 h-2 rounded-full" style="background: hsl(181 80% 55%);"></span> Principal
+              <span class="w-2 h-2 rounded-full" style="background: hsl(var(--accent));"></span> Principal
             </div>
             <div class="flex items-center gap-1.5 text-xs text-foreground/70">
-              <span class="w-2 h-2 rounded-full" style="background: hsl(252 62% 70%);"></span> Interest
+              <span class="w-2 h-2 rounded-full" style="background: hsl(var(--secondary));"></span> Interest
             </div>
           </div>
         </div>
