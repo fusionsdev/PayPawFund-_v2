@@ -1,0 +1,80 @@
+{
+  "memories": [],
+  "manual_memories": [],
+  "realtime_memories": [
+    {
+      "type": "claude_response",
+      "content": "\"ไม่ใช่อันนี้\" — เข้าใจ. หยุดเดา. ขอดู title ของ candidate ทั้งหมดก่อนถาม.",
+      "added_at": "2026-08-11T05:38:50.329967",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "message",
+      "content": "Handoff เขียนแล้ว → `H:\\Cache\\Temp\\handoff-aurum-leads-brand-skins.md` ครอบคลุม: * State ปัจจุบัน: 2 brand skins (pawpayfund.com + paypawcare.com, apex+www live) + ZIP-based CPA screening, commit `8e9",
+      "added_at": "2026-08-11T05:38:50.329967",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "claude_response",
+      "content": "Handoff ถูกต้องทั้งหมด. ผลตรวจเพิ่ม: `ConsentBanner.astro` ถูกลบไปด้วย, ไม่มี hardcoded root-relative href เลย, `BASE_URL` ใช้ใน `Hero.astro` + `Layout.astro` → BASE_URL gotcha ไม่มีหลุดในสกินนี้.\n\n**",
+      "added_at": "2026-08-11T05:40:44.898622",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "message",
+      "content": "โอเค ผมมี Project เพิ่ม.",
+      "added_at": "2026-08-11T05:40:44.899127",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "claude_response",
+      "content": "[AGENTS.md](AGENTS.md) แก้แล้ว 6 จุด:\n\n| จุด | เดิม → ใหม่ |\n|---|---|\n| Brand skin | เพิ่มใหม่ — `base:'/pawpay/'`, `outDir:'../fusion_formv_v1/public/pawpay'`, ไม่ deploy จาก dir นี้ |\n| Lead handof",
+      "added_at": "2026-08-11T05:52:19.400965",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "message",
+      "content": "คุณลองสำรวจเว็บนี้ดู https://lsmloan.vercel.app/",
+      "added_at": "2026-08-11T05:52:19.401465",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "claude_response",
+      "content": "\"Something else\" แต่ไม่มีข้อความ. ขอให้ขยาย — กิ่งนี้สำคัญเกินกว่าจะเดา.\n\nคำถามเปิด: platform ใหม่นี้ควรสัมพันธ์กับ fusion infra เดิมยังไงในหัวคุณ? เล่ามาสั้นๆ ก็ได้ เช่น:\n\n- อยากทิ้ง fusion แล้วเริ่ม",
+      "added_at": "2026-08-11T06:27:30.925714",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "message",
+      "content": "ต้องการแบบ ไม่ต้องทำเยอะมากมาย เพราะว่าตอนนี้ยอดไม่ค่อยดีแล้ว ก็ต้องรีบทำให้เสร็จไวๆ. แล้วเดี๋ยวถ้ายอดดีขึ้น เดี๋ยวเรามาทำเวอร์ชันอื่น.",
+      "added_at": "2026-08-11T06:27:30.925714",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "claude_response",
+      "content": "รับทราบ — plan ร่างไว้แล้วที่ [plan file](../../../Users/Barbara/.claude/plans/https-lsmloan-vercel-app-starry-fox.md) แต่ยังไม่ปิด. มีอะไรเพิ่ม ว่ามาเลย — จะ grill ต่อทีละเรื่องแล้ว fold เข้า plan.\n\n",
+      "added_at": "2026-08-11T06:58:57.373928",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "message",
+      "content": "ฉันต้องการให้คุณ (claude, codex, glm)ตั้ง automation สร้าง template และ Gen ตัวอย่าง Prompt ที่พนักงานเข้าใจที่จะเอาไปใช้งานได้ โดยฉันมีการใช้ bolt.new/ v0.dev",
+      "added_at": "2026-08-11T06:58:57.373928",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "claude_response",
+      "content": "หยุดรอ. Plan ปัจจุบันอยู่ที่ [plan file](../../../Users/Barbara/.claude/plans/https-lsmloan-vercel-app-starry-fox.md) — ยังไม่ fold R1–R6, ยังไม่ปิด plan. บอกมาได้เลยว่าจะเอาไง.",
+      "added_at": "2026-08-11T07:12:18.656956",
+      "source": "realtime_capture"
+    },
+    {
+      "type": "message",
+      "content": "ทำหมดเลย",
+      "added_at": "2026-08-11T07:12:18.656956",
+      "source": "realtime_capture"
+    }
+  ],
+  "created_at": "2026-08-11T05:38:50.326467",
+  "updated_at": "2026-08-11T07:12:18.656956"
+}
